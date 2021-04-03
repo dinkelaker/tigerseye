@@ -22,15 +22,15 @@ subprojects {
 	
 	project.repositories {
 		maven {
-			url 'http://myhost.com:8081/artifactory/public/'
+			url 'https://myhost.com:8081/artifactory/public/'
 		}
 	}
 	
 	uploadArchives {
 		repositories {
 			mavenDeployer {
-				snapshotRepository(url: "http://myhost.com:8081/artifactory/simple/libs-snapshot-local/"){}
-				repository(url: "http://myhost.com:8081/artifactory/simple/libs-release/"){}
+				snapshotRepository(url: "https://myhost.com:8081/artifactory/simple/libs-snapshot-local/"){}
+				repository(url: "https://myhost.com:8081/artifactory/simple/libs-release/"){}
 			}
 		}
 	}

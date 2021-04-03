@@ -12,10 +12,10 @@ sourceSets {
   }
   
 dependencies {  
-	compile project(':core')
-	compile files("${rootDir}/lib/javalogo.jar") //Unfortunately, Java Logo is not available as an artifact
-	compile files("${rootDir}/lib/popart.jar") //TODO: include again after refactoring POPART project
+	implementation project(':core')
+	implementation files("${rootDir}/lib/javalogo.jar") //Unfortunately, Java Logo is not available as an artifact
+	implementation files("${rootDir}/lib/popart.jar") //TODO: include again after refactoring POPART project
 		
-	compile libraries.groovy
-	testCompile libraries.junit
+	implementation libraries.groovy
+	testImplementation libraries.junit
 }

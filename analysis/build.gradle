@@ -1,7 +1,8 @@
 
 dependencies {  
-	compile project(':languages')
+	implementation project(':core')
+	implementation project(':languages')
 	
-	compile libraries.groovy
-	testCompile libraries.junit
+	implementation libraries.groovy
+	testImplementation libraries.junit
 }
