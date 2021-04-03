@@ -1,7 +1,7 @@
 def projectsToBuild = [
-    analysis:'tigerseye-analysis',
     core:'tigerseye-core',
-    languages:'tigerseye-languages'
+    languages:'tigerseye-languages',
+    analysis:'tigerseye-analysis'
 ]
 
 // use this line to import all projects
