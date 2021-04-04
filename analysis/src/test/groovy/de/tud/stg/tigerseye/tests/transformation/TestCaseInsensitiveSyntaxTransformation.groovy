@@ -22,7 +22,7 @@ import junit.framework.TestCase;
 import de.tud.stg.tigerseye.*;
 import de.tud.stg.tigerseye.transformation.syntax.*;
 import groovy.lang.Closure 
-//import de.tud.stg.tigerseye.analysis.syntax.CaseInsensitiveAmbiguityFreeAnalysis; 
+import de.tud.stg.tigerseye.analysis.syntax.CaseInsensitiveAmbiguityFreeAnalysis; 
 
 /**
  * @author Tom Dinkelaker
@@ -36,29 +36,25 @@ public class TestCaseInsensitiveSyntaxTransformation extends TestCase {
 	public void setUp() throws Exception{
 	}
 
-//	public void testUpperCaseSyntaxAnalysisWithAmbiguity() {
-//		System.out.println("\n---\ntestUpperCaseSyntaxAnalysisWithAmbiguity");
-//		Interpreter dsl = new CaseInsensitiveAmbiguityFreeAnalysis(new UCBLogoWithKeywordCaseAmbiguity());
-//	    Closure cl = {
-//			TURTLE (name:"Hexagon",color:RED) { 
-//		            REPEAT (6) {
-//				      FORWARD 50
-//		              RIGHT 60
-//		            }
-//			}        
-//		}
-//	    cl.delegate = dsl;
-//	    try {
-//	        cl.call();
-//	    	fail("Should not be reached as the case insensitive ambiguity for the 'FORWARD/fOrWaRd' keyword should be detected")
-//	    } catch (Exception ae) {
-//	    	//igonre 
-//	    } 
-//	    //Thread.sleep(5000);
-//	}
-	
-
-
-	
+	public void testUpperCaseSyntaxAnalysisWithAmbiguity() {
+		System.out.println("\n---\ntestUpperCaseSyntaxAnalysisWithAmbiguity");
+		Interpreter dsl = new CaseInsensitiveAmbiguityFreeAnalysis(new UCBLogoWithKeywordCaseAmbiguity());
+	    Closure cl = {
+			TURTLE (name:"Hexagon",color:RED) { 
+		            REPEAT (6) {
+				      FORWARD 50
+		              RIGHT 60
+		            }
+			}        
+		}
+	    cl.delegate = dsl;
+	    try {
+	        cl.call();
+	    	fail("Should not be reached as the case insensitive ambiguity for the 'FORWARD/fOrWaRd' keyword should be detected")
+	    } catch (Exception ae) {
+	    	//igonre 
+	    } 
+	    Thread.sleep(5000);
+	}
 	
 }

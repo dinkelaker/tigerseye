@@ -5,4 +5,5 @@ dependencies {
 	
 	implementation libraries.groovy
 	testImplementation libraries.junit
+	testImplementation files("${rootDir}/lib/javalogo.jar")
 }

@@ -3,11 +3,11 @@ ext {
     libraries = [:]
 }
 
-versions.gradle_version="1.7.10"
+versions.groovy_version="1.7.10"
 versions.junit_version="4.8"
 
 //Base
-libraries.groovy="org.codehaus.groovy:groovy-all:${versions.gradle_version}"
+libraries.groovy="org.codehaus.groovy:groovy-all:${versions.groovy_version}"
 
 //Testing
 libraries.easymock='org.easymock:easymock:3.3.1'

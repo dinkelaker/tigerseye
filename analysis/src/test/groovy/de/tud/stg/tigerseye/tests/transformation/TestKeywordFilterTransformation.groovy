@@ -22,7 +22,7 @@ import junit.framework.TestCase;
 import de.tud.stg.tigerseye.*;
 import de.tud.stg.tigerseye.analysis.syntax.*;
 import de.tud.stg.tigerseye.lang.logo.standalone.IConciseLogoStandAlone; 
-import de.tud.stg.popart.dslsupport.logo.IUCBLogo;
+//import de.tud.stg.popart.dslsupport.logo.IUCBLogo;
 import de.tud.stg.tigerseye.lang.logo.UCBLogo;
 import de.tud.stg.tigerseye.lang.logo.standalone.IConciseLogoStandAlone;
 import de.tud.stg.tigerseye.transformation.syntax.KeywordFilterTransformation;

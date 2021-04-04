@@ -28,10 +28,11 @@ import de.tud.stg.tigerseye.Interpreter;
  */
 
 
-//public class CaseInsensitiveAmbiguityFreeAnalysis extends UsedKeywordsAnalysis {
-public class CaseInsensitiveAmbiguityFreeAnalysis {
+public class CaseInsensitiveAmbiguityFreeAnalysis extends UsedKeywordsAnalysis {
+//public class CaseInsensitiveAmbiguityFreeAnalysis {
 
 	Interpreter interpreter;
+	Set<String> ambiguities;
 	
 	public CaseInsensitiveAmbiguityFreeAnalysis(Interpreter interpreter) {
 		super();
@@ -48,17 +49,46 @@ public class CaseInsensitiveAmbiguityFreeAnalysis {
     private boolean isNonAmbiguousWRTLiterals() {
 	    List<MetaProperty> properties = interpreter.metaClass.getProperties();
 
-	    literals.each { String literalKeyword ->
-    	     throw new IllegalStateException("not yet implemented");
-	         return false;
+		Set<String> foundLiterals = [];
+
+		boolean foundAmbiguity = false;
+
+	    properties.each { String literalKeyword ->
+    	    if (!foundLiterals.contains(literalKeyword)) {
+				foundLiterals << literalKeyword;
+				println "literal unique: $literalKeyword"
+			} else {
+				ambiguities << literalKeyword;
+				foundAmbiguity = true;
+				println "literal ambique: $literalKeyword"
+			}
     	}
+
+		return foundAmbiguity;
     }
 
     private boolean isNonAmbiguousWRTOperations() {
-    	throw new IllegalStateException("not yet implemented");
+	    List<MetaProperty> properties = interpreter.metaClass.getMethods();
+
+		Set<String> foundLiterals = [];
+
+		boolean foundAmbiguity = false;
+
+	    properties.each { String literalKeyword ->
+    	    if (!foundLiterals.contains(literalKeyword)) {
+				foundLiterals << literalKeyword;
+				println "literal unique: $literalKeyword"
+			} else {
+				ambiguities << literalKeyword;
+				foundAmbiguity = true;
+				println "literal ambique: $literalKeyword"
+			}
+    	}
+		
+		return foundAmbiguity;
     }
     
     private boolean isNonAmbiguousWRTAbstractions() {
-    	throw new IllegalStateException("not yet implemented");
-    }
+	    return isNonAmbiguousWRTOperations();
+	}
 }

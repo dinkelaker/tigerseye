@@ -17,5 +17,9 @@ dependencies {
 	implementation files("${rootDir}/lib/popart.jar") //TODO: include again after refactoring POPART project
 		
 	implementation libraries.groovy
+	
 	testImplementation libraries.junit
+	testImplementation project(':core')
+	testImplementation files("${rootDir}/lib/javalogo.jar")
+
 }
