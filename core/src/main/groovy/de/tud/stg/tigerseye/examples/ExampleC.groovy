@@ -14,20 +14,20 @@
 // specific language governing permissions and limitations
 // under the License.
 ///////////////////////////////////////////////////////////////////////////////
-package de.tud.stg.tigerseye.tests;
+package de.tud.stg.tigerseye.examples;
 
-import de.tud.stg.tigerseye.DSL 
+import de.tud.stg.tigerseye.DSL; 
 import de.tud.stg.tigerseye.Interpreter;
-
+import de.tud.stg.tigerseye.examples.ExampleA;
 
 /**
  * An example language embedding that defines every different expression types.
  * @author Tom Dinkelaker
  */
-public class ExampleB extends Interpreter implements DSL {
+public class ExampleC extends ExampleA implements DSL {
     
-    public int keyword2() {
-    	return 2;
+    public int keyword3() {
+    	return 3;
     }
     
 }

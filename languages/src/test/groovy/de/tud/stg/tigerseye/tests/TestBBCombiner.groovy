@@ -24,6 +24,7 @@ import junit.framework.TestCase
 import org.junit.Before 
 
 import de.tud.stg.tigerseye.*;
+import de.tud.stg.tigerseye.examples.*;
 
 import de.tud.stg.tigerseye.exceptions.SyntaxConflictException;
 

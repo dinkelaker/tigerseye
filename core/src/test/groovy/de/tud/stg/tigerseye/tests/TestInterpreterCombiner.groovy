@@ -21,6 +21,7 @@ import junit.framework.TestCase
 import org.junit.Before 
 
 import de.tud.stg.tigerseye.*;
+import de.tud.stg.tigerseye.examples.*;
 
 /**
  * @author Tom Dinkelaker

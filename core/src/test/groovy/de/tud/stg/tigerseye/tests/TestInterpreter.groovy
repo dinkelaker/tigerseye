@@ -20,8 +20,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import junit.framework.TestCase;
-import junit.framework.Assert;
+import junit.framework.Assert;
+
 import de.tud.stg.tigerseye.*;
+import de.tud.stg.tigerseye.examples.ExampleDSL;
 
 /**
  * @author Tom Dinkelaker

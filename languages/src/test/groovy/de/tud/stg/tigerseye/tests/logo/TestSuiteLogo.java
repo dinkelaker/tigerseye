@@ -47,7 +47,7 @@ public class TestSuiteLogo extends TestSuite {
 	  public static void main(String[] args) {
 		  new TestSquare().testSquare(); 
 		  new TestRose().testRose(); 
-		  new TestMetaLogo().testMetaLogoRose();
+		  //new TestMetaLogo().testMetaLogoRose();
 		  new TestTimedSquare().testTimedSquare();
 		  new TestFunctionalLogo().testRecursive();
 	  }

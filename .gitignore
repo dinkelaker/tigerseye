@@ -19,3 +19,4 @@ languages/bin/
 
 # 3rd party components 
 lib/
+/bin/

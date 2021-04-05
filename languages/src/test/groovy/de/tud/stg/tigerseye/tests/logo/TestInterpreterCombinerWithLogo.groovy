@@ -17,13 +17,12 @@
 package de.tud.stg.tigerseye.tests.logo;
 
 import de.tud.stg.tigerseye.lang.logo.ExtendedLogo;
-import de.tud.stg.tigerseye.tests.ExampleA
-import de.tud.stg.tigerseye.tests.ExampleB
 import groovy.lang.Closure;
-import junit.framework.TestCase 
-import org.junit.Before 
+import junit.framework.TestCase;
+import org.junit.Before; 
 
 import de.tud.stg.tigerseye.*;
+import de.tud.stg.tigerseye.examples.*;
 
 /**
  * @author Tom Dinkelaker

@@ -15,11 +15,14 @@ dependencies {
 	implementation project(':core')
 	implementation files("${rootDir}/lib/javalogo.jar") //Unfortunately, Java Logo is not available as an artifact
 	implementation files("${rootDir}/lib/popart.jar") //TODO: include again after refactoring POPART project
+	implementation 'de.tud.stg.tigerseye:core:1.0'
 		
 	implementation libraries.groovy
 	
 	testImplementation libraries.junit
-	testImplementation project(':core')
-	testImplementation files("${rootDir}/lib/javalogo.jar")
-
+	// testImplementation project(':core')
+    // testImplementation files("${rootDir}/lib/javalogo.jar")
+	// testImplementation 'de.tud.stg.tigerseye:core:1.0'
+	
+	// testRuntimeOnly 'de.tud.stg.tigerseye:core:1.0'
 }
